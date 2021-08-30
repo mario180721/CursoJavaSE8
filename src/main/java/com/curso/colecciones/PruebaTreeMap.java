@@ -4,6 +4,7 @@ import java.util.Collection;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
+import java.util.TreeSet;
 
 public class PruebaTreeMap {
 
@@ -36,6 +37,21 @@ public class PruebaTreeMap {
 		for(String email : listaEmails) {
 			System.out.println("email " + email);
 		}
+		
+		
+		
+		
+		//String o clase Wrapper (Integer,Double, Booleans, ....)
+		// equals hashacode y comparable
+		
+		TreeSet<String> s = new TreeSet<String>(new CompararCadenasAlresves());
+		
+		s.add("AAAA");
+		s.add("2AAA2332A");
+		
+		
+		
+		
 		
 		
 		

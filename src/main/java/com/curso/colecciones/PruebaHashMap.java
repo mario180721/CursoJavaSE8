@@ -2,6 +2,7 @@ package com.curso.colecciones;
 
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 
 public class PruebaHashMap {
@@ -11,7 +12,7 @@ public class PruebaHashMap {
         //key = id value =Alumno
     	//Key  es una coleccione de Set NO DUPLICADO
     	//Coleccion Map no permite dos key iguales
-        HashMap<Integer, Alumno> map = new HashMap<Integer, Alumno>();
+       Map<Integer, Alumno> map = new HashMap<Integer, Alumno>();
             
         
         Alumno a1 = new Alumno(2,"Luis",1);
