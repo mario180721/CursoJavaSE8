@@ -5,9 +5,10 @@ import java.util.*;
 public class PruebaList {
     
     public static void main(String[] args) {
+        // DUPLICADOS SI
+    	// INDEXADO SI
         
-        
-        List<String> l = new Vector<String>();
+        List<String> l = new Vector<String>(); //ThreadSave
                           //new ArrayList();
 
         l.add("Zorro"); //0
@@ -15,6 +16,11 @@ public class PruebaList {
         l.add("Avion");  //2
         
         l.add(2, "Zapato"); //2 y Avion pasa a la posición 3
+        
+        for(String s : l){
+            System.out.println(s);
+        }
+        
         
         System.out.println("ver 2: " + l.get(2));
         

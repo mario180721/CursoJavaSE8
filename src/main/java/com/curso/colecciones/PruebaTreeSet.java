@@ -23,7 +23,7 @@ public class PruebaTreeSet {
         
         //lista orden solo por el nombre 
         
-        Set<Alumno> listaOrdenadaPorId = new TreeSet(new OrdenarAlumnoPorId());
+        Set<Alumno> listaOrdenadaPorId = new TreeSet(new OrdenarAlumnoPorCursoAlumno());
         
         listaOrdenadaPorId.add(new Alumno(2,"Luis",2));
         listaOrdenadaPorId.add(new Alumno(1,"Maria",3));

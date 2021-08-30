@@ -7,34 +7,37 @@ import java.util.*;
 public class PruebaSetAlumnos {
     
     public static void main(String[] args) {
+        	
+    	
+    	//1. Set  - 3 tipos
+    	//  colleccion de objetos Alumno
+    	// recorrer para mostrar datos del alumno
+    	
+    	
+    	//  1. recorrer cualquier orden
+    	//  2. recorrer en orden de insercion
+    	//  3. recorrer en orde de id
+    	//  4. recorrer en orden de curso, nombre Alumno
+ 
         
+        Set<Alumno> lista =  new TreeSet(new  OrdenarAlumnoPorCursoAlumno());//new HashSet();
         
-        Set<Alumno> lista = new HashSet();
-        
-        Alumno a = new Alumno("Pedro", 3);
-        Alumno b = new Alumno("Pedro", 3);
-        Alumno c = a;
-        
-        
-        System.out.println("a==b" + (a==b)); //false
-        System.out.println("a==c" + (a==c));  //true
-        System.out.println("a.equals(b)" + (a.equals(b))); //true
-        System.out.println("a.equals(c)" + (a.equals(c))); //true        
+        Alumno a = new Alumno(3,"Pedro", 1);
+        Alumno b = new Alumno(2,"Laura", 1);
+        Alumno c = new Alumno(6,"Mario", 1);
         
         lista.add(a);
-        lista.add(a);
-        lista.add(new Alumno("Luis", 1));
-        lista.add(new Alumno("Luis", 1));
-        lista.add(new Alumno("Maria", 1));
-        lista.add(new Alumno("Maria", 3));
-        
-        
-        
-       
+        lista.add(b);
+        lista.add(c);
+        lista.add(new Alumno(6,"Maria", 1));
         
         
         for(Alumno a2: lista)
             System.out.println(a2);
+        
+        
+        
+        
             
     }
     
