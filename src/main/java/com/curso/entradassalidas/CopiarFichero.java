@@ -7,7 +7,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class LeerFichero {
+public class CopiarFichero {
 	
 	public static void main(String[] args) {
 		
@@ -21,9 +21,6 @@ public class LeerFichero {
 		File miFicheroLectura = new File("DatosALeer.txt");
 		FileReader fr = null;
 		BufferedReader br = null;
-		
-		
-		
 		
 		try {
 			// crear fichero. 
@@ -60,33 +57,6 @@ public class LeerFichero {
 			}
 
 		}
-		
-		try {
-			 FileReader input = new FileReader(miFichero);
-			 BufferedReader bufInput = new BufferedReader(input);
-			 try {
-			 FileWriter output = new FileWriter("DatosALeer1.txt");
-			 BufferedWriter bufOutput= new BufferedWriter(output);
-			try {
-			 String line;
-			 // lee la primera línea
-			 line = bufInput.readLine();
-		while ( line != null ) {
-			// escribe la línea en el archivo de salida
-			 bufOutput.write(line, 0, line.length());
-			bufOutput.newLine();
-			// lee la línea siguiente
-			line = bufInput.readLine();
-			}
-			 } finally {
-			bufOutput.close();
-			}
-			} finally {
-			bufInput.close();
-			}
-			} catch (IOException e) {
-			 e.printStackTrace();
-			}
 		
 		
 		
