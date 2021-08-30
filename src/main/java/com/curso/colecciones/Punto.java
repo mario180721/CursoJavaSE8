@@ -3,7 +3,7 @@ package com.curso.colecciones;
 import java.awt.Color;
 import java.util.Objects;
 
-public class Punto {
+public class Punto implements Comparable<Punto>{
 	
      private int x;
      private int y;
@@ -48,6 +48,29 @@ public class Punto {
 			return false;
 		Punto other = (Punto) obj;
 		return x == other.x && y == other.y;
+	}
+
+	/**
+	 *  Nos dice si el objeto con el que me  comparo es 
+	 *  mayor  , menor  o igual :
+	 *  . si es mayor retorno un entero positivo
+	 *  . si es igual retorno 0
+	 *  . si es menor retorno un entero negativo
+	 *  
+	 * @param objeto con que se compara 
+	 * @return int   - 
+	 */
+	@Override
+	public int compareTo(Punto o) {
+		
+		if(this.x == o.x && this.y == o.y ) return 0;
+		
+		int res = this.x - o.x;
+		if( res == 0 ) {
+			return this.y - o.y;
+		}
+		return res;
+		
 	}
 	
 	
