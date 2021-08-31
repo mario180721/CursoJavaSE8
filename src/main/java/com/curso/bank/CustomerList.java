@@ -1,10 +1,14 @@
 package com.curso.bank;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.*;
 
 public class CustomerList {
 
   private String firstName;
+  
+  private LocalDate fechaAlta;
 
   private String lastName;
 
@@ -16,7 +20,16 @@ public class CustomerList {
     lastName = l;
     // initialize accounts array
     accounts = new ArrayList<Account>();
+    this.fechaAlta=LocalDate.now();
   }
+  
+  
+  public CustomerList(String f, String l,LocalDate fechaAlta) {
+	   this(f, l);
+	   this.fechaAlta=fechaAlta;
+	  }
+  
+  
 
   public String getFirstName() {
     return firstName;
